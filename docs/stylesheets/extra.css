@@ -1,0 +1,37 @@
+.md-header__button.md-logo img {
+  height: 1.8rem;
+  width: auto;
+}
+
+[data-md-color-scheme="slate"] .md-logo img {
+  content: url("../assets/arc_light.png");
+}
+
+[data-md-color-scheme="slate"] .md-typeset :is(h1, h2, h3, h4, h5, h6) {
+  color: #fff;
+}
+
+/* Diagrams: stronger borders and lines, and edge labels drawn on the page background */
+:root {
+  --md-mermaid-node-fg-color: #3949ab;
+  --md-mermaid-node-bg-color: #e8eaf6;
+  --md-mermaid-edge-color: var(--md-default-fg-color--light);
+  --md-mermaid-label-fg-color: var(--md-default-fg-color);
+  --md-mermaid-label-bg-color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-mermaid-node-fg-color: #8c9eff;
+  --md-mermaid-node-bg-color: #283046;
+}
+
+/* Inside a workshop, the sidebar shows only that workshop's lessons. The category
+   landing page (e.g. Hardware) still lists every workshop. Wide screens only: on
+   phones the sidebar is the menu drawer, which needs every workshop to navigate. */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav
+    > .md-nav__list:has(> .md-nav__item--active)
+    > .md-nav__item:not(.md-nav__item--active) {
+    display: none;
+  }
+}

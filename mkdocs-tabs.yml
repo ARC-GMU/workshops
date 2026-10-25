@@ -1,0 +1,38 @@
+# Alternative layout: one top-bar tab per workshop, instead of one per category.
+# Same pages as mkdocs.yml; only the menu differs. Preview with:
+#   mkdocs serve -f mkdocs-tabs.yml -a localhost:8001
+INHERIT: mkdocs.yml
+
+nav:
+  - Home: index.md
+  - Start Here: start-here/index.md
+  - Git, GitHub & Linux:
+      - software/git-github-linux/index.md
+      - What are Git, GitHub & Linux?: software/git-github-linux/01-intro.md
+      - Install & set up: software/git-github-linux/02-setup.md
+      - The Ubuntu command line: software/git-github-linux/03-command-line.md
+      - Your first repository: software/git-github-linux/04-first-repo.md
+      - Pushing to GitHub: software/git-github-linux/05-push-to-github.md
+      - Branches: software/git-github-linux/06-branches.md
+      - Pull requests: software/git-github-linux/07-pull-requests.md
+      - Working together & merge conflicts: software/git-github-linux/08-collaborating.md
+      - Forks: software/git-github-linux/09-forks.md
+      - Cheat sheet: software/git-github-linux/cheat-sheet.md
+  - Electronics:
+      - hardware/electronics-basics-multimeter/index.md
+      - Voltage, current & resistance: hardware/electronics-basics-multimeter/01-ohms-law.md
+      - Using a multimeter: hardware/electronics-basics-multimeter/02-multimeter.md
+      - Breadboards: hardware/electronics-basics-multimeter/03-breadboards.md
+  - Arduino:
+      - hardware/arduino-beginners/index.md
+      - Install & set up: hardware/arduino-beginners/01-setup.md
+      - Blink an LED: hardware/arduino-beginners/02-blink.md
+  - Raspberry Pi:
+      - hardware/raspberry-pi-beginners/index.md
+      - Install & set up: hardware/raspberry-pi-beginners/01-setup.md
+      - Blink an LED with GPIO: hardware/raspberry-pi-beginners/02-gpio-blink.md
+  - CAD:
+      - mechanical/cad-beginners/index.md
+      - Set up CAD software: mechanical/cad-beginners/01-setup.md
+      - Your first part: mechanical/cad-beginners/02-first-part.md
+  - Tags: tags.md

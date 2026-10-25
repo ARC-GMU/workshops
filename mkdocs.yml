@@ -1,0 +1,124 @@
+site_name: ARC Workshops
+site_description: Hands-on robotics workshops from the Autonomous Robotics Club at GMU
+site_author: Autonomous Robotics Club at GMU
+site_url: https://arc-gmu.github.io/workshops/
+repo_url: https://github.com/ARC-GMU/workshops
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Autonomous Robotics Club at GMU
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/arc_dark.png
+  favicon: assets/logooo_circlebg.png
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://gmu.autonomousrobotics.club/
+      name: Autonomous Robotics Club at GMU
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/zn93yRNZGb
+      name: Discord
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: ["."]   # lets pages embed files from code/
+      check_paths: true  # build fails if an embedded file is missing
+
+nav:
+  - Home: index.md
+  - Start Here: start-here/index.md
+  - Hardware:
+      - hardware/index.md
+      - Electronics Basics & Multimeter:
+          - hardware/electronics-basics-multimeter/index.md
+          - Voltage, current & resistance: hardware/electronics-basics-multimeter/01-ohms-law.md
+          - Using a multimeter: hardware/electronics-basics-multimeter/02-multimeter.md
+          - Breadboards: hardware/electronics-basics-multimeter/03-breadboards.md
+      - Arduino for Beginners:
+          - hardware/arduino-beginners/index.md
+          - Install & set up: hardware/arduino-beginners/01-setup.md
+          - Blink an LED: hardware/arduino-beginners/02-blink.md
+      - Raspberry Pi for Beginners:
+          - hardware/raspberry-pi-beginners/index.md
+          - Install & set up: hardware/raspberry-pi-beginners/01-setup.md
+          - Blink an LED with GPIO: hardware/raspberry-pi-beginners/02-gpio-blink.md
+  - Mechanical:
+      - mechanical/index.md
+      - CAD for Beginners:
+          - mechanical/cad-beginners/index.md
+          - Set up CAD software: mechanical/cad-beginners/01-setup.md
+          - Your first part: mechanical/cad-beginners/02-first-part.md
+  - Software:
+      - software/index.md
+      - Git, GitHub & Linux:
+          - software/git-github-linux/index.md
+          - What are Git, GitHub & Linux?: software/git-github-linux/01-intro.md
+          - Install & set up: software/git-github-linux/02-setup.md
+          - The Ubuntu command line: software/git-github-linux/03-command-line.md
+          - Your first repository: software/git-github-linux/04-first-repo.md
+          - Pushing to GitHub: software/git-github-linux/05-push-to-github.md
+          - Branches: software/git-github-linux/06-branches.md
+          - Pull requests: software/git-github-linux/07-pull-requests.md
+          - Working together & merge conflicts: software/git-github-linux/08-collaborating.md
+          - Forks: software/git-github-linux/09-forks.md
+          - Cheat sheet: software/git-github-linux/cheat-sheet.md
+  - Tags: tags.md
